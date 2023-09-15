@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-adjusting Page</title>
+</head>
+<body>
+    <!-- Elements for attribute change -->
+    <a id="sampleLink" href="https://www.example.com">Visit Example</a>
+    <img id="sampleImage" width="300px" height="auto" src="./rafael-k-streit-fOv3InYoH54-unsplash.jpg" alt="Placeholder Image">
+    <input id="sampleInput" type="text" placeholder="Type something...">
+
+    <!-- Buttons for triggering attribute changes -->
+    <button onclick="changeLink()">Change Link URL</button>
+    <button onclick="changeImage()">Change Image Source</button>
+    <button onclick="changeInput()">Change Input Placeholder</button>
+
+    <!-- Element and Button for innerHTML change -->
+    <div id="contentDiv">This is the original content of the div.</div>
+    <button onclick="changeContent()">Change Div Content</button>
+
+    <script>
+        // Functions to change attributes and values
+        function changeLink() {
+            document.getElementById('sampleLink').setAttribute('href', 'https://www.google.com');
+        }
+
+        function changeImage() {
+            document.getElementById('sampleImage').setAttribute('src', 'https://via.placeholder.com/200');
+            document.getElementById('sampleImage').setAttribute('alt', 'New Placeholder Image');
+        }
+
+        function changeInput() {
+            document.getElementById('sampleInput').setAttribute('placeholder', 'Type something here');
+        }
+
+        // Function to change innerHTML content
+        function changeContent() {
+            document.getElementById('contentDiv').innerHTML = '<strong>The content has been changed!</strong>';
+        }
+    </script>
+</body>
+</html>
